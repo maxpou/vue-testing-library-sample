@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <div class="ui container" v-if="mySelection.length > 0">
       <h2 class="sectionTitle">My selection</h2>
       <div class="ui relaxed divided list">
