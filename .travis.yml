@@ -2,10 +2,6 @@ sudo: required
 
 dist: trusty
 
-env:
-  - TEST_SUITE=lint
-  - TEST_SUITE=test
-
 language: node_js
 
 node_js: stable
@@ -15,5 +11,13 @@ cache:
     - node_modules
 
 script:
-  - "npm run $TEST_SUITE"
+  - "npm run lint"
+  - "npm test -- --coverage"
 
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: tests/coverage/lcov-report
+  on:
+    branch: master
