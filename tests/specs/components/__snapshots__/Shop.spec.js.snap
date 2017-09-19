@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shop.vue test initial rendering 1`] = `"<div><h2>Shop</h2> <div class=\\"ui container shop\\"><div class=\\"ui cards three column\\"></div></div> <div class=\\"ui container load\\"><!----></div></div>"`;
+
+exports[`Shop.vue test rendering with datas 1`] = `
+"<div><h2>Shop</h2> <div class=\\"ui container shop\\"><div class=\\"ui cards three column\\"><div class=\\"card\\"><div class=\\"content\\"><div class=\\"header\\">Executor</div> <div class=\\"meta\\">Kuat Drive Yards, Fondor Shipyards</div> <div class=\\"description\\"><i class=\\"bitcoin icon\\"></i> 1143350000
+          </div></div> <div class=\\"ui bottom orange attached button\\"><i class=\\"plus icon\\"></i> add to selection
+        </div></div><div class=\\"card\\"><div class=\\"content\\"><div class=\\"header\\">Sentinel-class landing craft</div> <div class=\\"meta\\">Sienar Fleet Systems, Cyngus Spaceworks</div> <div class=\\"description\\"><i class=\\"bitcoin icon\\"></i> 240000
+          </div></div> <div class=\\"ui bottom orange attached button\\"><i class=\\"plus icon\\"></i> add to selection
+        </div></div><div class=\\"card\\"><div class=\\"content\\"><div class=\\"header\\">Death Star</div> <div class=\\"meta\\">Imperial Department of Military Research, Sienar Fleet Systems</div> <div class=\\"description\\"><i class=\\"bitcoin icon\\"></i> 1000000000000
+          </div></div> <div class=\\"ui bottom orange attached button\\"><i class=\\"plus icon\\"></i> add to selection
+        </div></div><div class=\\"card\\"><div class=\\"content\\"><div class=\\"header\\">Millennium Falcon</div> <div class=\\"meta\\">Corellian Engineering Corporation</div> <div class=\\"description\\"><i class=\\"bitcoin icon\\"></i> 100000
+          </div></div> <div class=\\"ui bottom orange attached button\\"><i class=\\"plus icon\\"></i> add to selection
+        </div></div><div class=\\"card\\"><div class=\\"content\\"><div class=\\"header\\">Y-wing</div> <div class=\\"meta\\">Koensayr Manufacturing</div> <div class=\\"description\\"><i class=\\"bitcoin icon\\"></i> 134999
+          </div></div> <div class=\\"ui bottom orange attached button\\"><i class=\\"plus icon\\"></i> add to selection
+        </div></div><div class=\\"card\\"><div class=\\"content\\"><div class=\\"header\\">X-wing</div> <div class=\\"meta\\">Incom Corporation</div> <div class=\\"description\\"><i class=\\"bitcoin icon\\"></i> 149999
+          </div></div> <div class=\\"ui bottom orange attached button\\"><i class=\\"plus icon\\"></i> add to selection
+        </div></div><div class=\\"card\\"><div class=\\"content\\"><div class=\\"header\\">TIE Advanced x1</div> <div class=\\"meta\\">Sienar Fleet Systems</div> <!----></div> <div class=\\"ui disabled button\\">Sold out</div></div><div class=\\"card\\"><div class=\\"content\\"><div class=\\"header\\">Slave 1</div> <div class=\\"meta\\">Kuat Systems Engineering</div> <!----></div> <div class=\\"ui disabled button\\">Sold out</div></div><div class=\\"card\\"><div class=\\"content\\"><div class=\\"header\\">Imperial shuttle</div> <div class=\\"meta\\">Sienar Fleet Systems</div> <div class=\\"description\\"><i class=\\"bitcoin icon\\"></i> 240000
+          </div></div> <div class=\\"ui bottom orange attached button\\"><i class=\\"plus icon\\"></i> add to selection
+        </div></div><div class=\\"card\\"><div class=\\"content\\"><div class=\\"header\\">EF76 Nebulon-B escort frigate</div> <div class=\\"meta\\">Kuat Drive Yards</div> <div class=\\"description\\"><i class=\\"bitcoin icon\\"></i> 8500000
+          </div></div> <div class=\\"ui bottom orange attached button\\"><i class=\\"plus icon\\"></i> add to selection
+        </div></div></div></div> <div class=\\"ui container load\\"><button class=\\"fluid ui grey basic button\\">
+      load more data
+    </button></div></div>"
+`;
