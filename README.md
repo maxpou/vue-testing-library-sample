@@ -1,6 +1,6 @@
 # vue-vuex-jest
 
-[![Build Status](https://travis-ci.org/maxpou/vue-vuex-jest.svg?branch=master)](https://travis-ci.org/maxpou/vue-vuex-jest) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Build Status](https://travis-ci.org/maxpou/vue-vuex-jest.svg?branch=master)](https://travis-ci.org/maxpou/vue-vuex-jest) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 
 
 > A Vue.js/vuex project to test [Facebook/Jest](https://facebook.github.io/jest/) integration. Data come from [Star Wars API](https://swapi.co/).
