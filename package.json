@@ -8,8 +8,8 @@
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src tests",
-    "test": "cross-env BABEL_ENV=test jest tests/specs/**",
-    "unit": "cross-env BABEL_ENV=test jest tests/specs/**"
+    "test": "npm run unit",
+    "unit": "cross-env BABEL_ENV=test jest tests/unit/specs/**"
   },
   "license": "MIT",
   "repository": {
@@ -102,7 +102,7 @@
       "!src/main.js",
       "!**/node_modules/**"
     ],
-    "coverageDirectory": "<rootDir>/tests/coverage",
-    "verbose": true
+    "coverageDirectory": "<rootDir>/tests/unit/coverage",
+    "verbose": false
   }
 }
