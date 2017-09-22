@@ -1,6 +1,7 @@
 # vue-vuex-jest
 
-[![Build Status](https://travis-ci.org/maxpou/vue-vuex-jest.svg?branch=master)](https://travis-ci.org/maxpou/vue-vuex-jest) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Build Status](https://travis-ci.org/maxpou/vue-vuex-jest.svg?branch=master)](https://travis-ci.org/maxpou/vue-vuex-jest) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
+
 
 
 > A Vue.js/vuex project to test [Facebook/Jest](https://facebook.github.io/jest/) integration. Data come from [Star Wars API](https://swapi.co/).
@@ -30,13 +31,13 @@
 npm test
 
 # Run tests + generate coverage
-npm test -- --coverage
+npm run unit -- --coverage
 
-# Run tests + generate coverage
-npm test -- --watchAll
+# Run tests in watch node
+npm run unit -- --watchAll
 
 # Run tests + update snapshots if needed
-npm test -- -u
+npm run unit -- -u
 ```
 
 ## Build Setup
