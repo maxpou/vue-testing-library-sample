@@ -12,12 +12,12 @@ cache:
 
 script:
   - "npm run lint"
-  - "npm test -- --coverage"
+  - "npm run unit -- --coverage"
 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: tests/coverage/lcov-report
+  local_dir: tests/unit/coverage/lcov-report
   on:
     branch: master

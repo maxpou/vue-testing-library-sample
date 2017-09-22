@@ -30,13 +30,13 @@
 npm test
 
 # Run tests + generate coverage
-npm test -- --coverage
+npm run unit -- --coverage
 
-# Run tests + generate coverage
-npm test -- --watchAll
+# Run tests in watch node
+npm run unit -- --watchAll
 
 # Run tests + update snapshots if needed
-npm test -- -u
+npm run unit -- -u
 ```
 
 ## Build Setup
