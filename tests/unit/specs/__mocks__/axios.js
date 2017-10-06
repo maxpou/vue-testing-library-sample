@@ -1,7 +1,7 @@
 class Axios {
   get (url) {
-    return import('../api/swapi.response.json')
-      .then(data => Promise.resolve({ status: 200, statusText: 'OK', data: data }))
+    const data = import('../api/swapi.response.json')
+    return Promise.resolve({ status: 200, statusText: 'OK', data: data })
   }
 }
 
