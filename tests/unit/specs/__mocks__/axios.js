@@ -1,9 +1,10 @@
-import swapiResponse from '../api/swapi.response.json'
-
 class Axios {
   get (url) {
-    const response = { status: 200, statusText: 'OK', data: swapiResponse }
-    return Promise.resolve(response)
+    return import('../api/swapi.response.json')
+      .then((data) => {
+        const response = { status: 200, statusText: 'OK', data: data }
+        return Promise.resolve(response)
+      })
   }
 }
 
