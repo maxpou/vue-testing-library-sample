@@ -1,9 +1,10 @@
-import swapiResponse from '../api/swapi.response.json'
-
 class Axios {
   get (url) {
-    const response = { status: 200, statusText: 'OK', data: swapiResponse }
-    return Promise.resolve(response)
+    const shortUrl = url.replace(process.env.SWAPI_URL, '')
+
+    switch (shortUrl) {
+      case 'starships/?page=1': return Promise.resolve({ data: import('../api/swapi.response.json') })
+    }
   }
 }
 
