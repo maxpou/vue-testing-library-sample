@@ -1,32 +1,38 @@
 <template>
   <div id="app">
-    <shop></shop>
-    <selection></selection>
+    <Navbar
+      :basket-size="basketSize"
+    />
+    <div class="page">
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <script>
-import Shop from './components/Shop'
-import Selection from './components/Selection'
+import { mapGetters } from 'vuex'
+import Navbar from './components/Navbar'
 
 export default {
-  name: 'app',
   components: {
-    Shop,
-    Selection
+    Navbar
+  },
+  computed: {
+    ...mapGetters([
+      'basketSize'
+    ])
   }
 }
 </script>
 
 <style>
-h2 {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: "Lato", sans-serif;
+  color: rgba(34, 34, 34, 0.8);
 }
 </style>

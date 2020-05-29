@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Selection.vue test conditional rendering 1`] = `"<div><div class=\\"ui container\\"><h2 class=\\"sectionTitle\\">My selection</h2> <div class=\\"ui relaxed divided list\\"><div class=\\"item\\"><div class=\\"right floated content\\"><div class=\\"ui button\\">-</div></div> <i class=\\"large rocket middle aligned icon\\"></i> <div class=\\"content\\"><a class=\\"header\\">Death Star</a> <div class=\\"left meta\\">Imperial Department of Military Research, Sienar Fleet Systems</div> <div class=\\"left description\\">1000000000000</div></div></div><div class=\\"item\\"><div class=\\"right floated content\\"><div class=\\"ui button\\">-</div></div> <i class=\\"large rocket middle aligned icon\\"></i> <div class=\\"content\\"><a class=\\"header\\">X-wing</a> <div class=\\"left meta\\">Incom Corporation</div> <div class=\\"left description\\">149999</div></div></div></div></div></div>"`;
-
-exports[`Selection.vue test initial rendering 1`] = `"<div><!----></div>"`;
