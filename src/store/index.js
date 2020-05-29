@@ -1,36 +1,21 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import * as actions from './actions'
-import starships from './modules/starships'
-import selection from './modules/selection'
+
+import catalogModule from './modules/catalog'
+import basketModule from './modules/basket'
 
 Vue.use(Vuex)
 
-const debug = process.env.NODE_ENV !== 'production'
+const getCatalog = () => catalogModule
+const getBasket = () => basketModule
 
-const store = new Vuex.Store({
-  actions,
-  modules: {
-    starships,
-    selection
-  },
-  strict: debug
-})
-
-/* istanbul ignore if */
-if (module.hot) {
-  module.hot.accept([
-    './modules/starships'
-  ], () => {
-    const starships = require('./modules/starships').default
-    const selection = require('./modules/selection').default
-    store.hotUpdate({
-      modules: {
-        starships,
-        selection
-      }
-    })
-  })
+export function getDefaultStore () {
+  return {
+    modules: {
+      catalog: getCatalog(),
+      basket: getBasket()
+    }
+  }
 }
 
-export default store
+export default new Vuex.Store(getDefaultStore())
