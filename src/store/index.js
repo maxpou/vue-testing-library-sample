@@ -6,14 +6,11 @@ import basketModule from './modules/basket'
 
 Vue.use(Vuex)
 
-const getCatalog = () => catalogModule
-const getBasket = () => basketModule
-
 export function getDefaultStore () {
   return {
     modules: {
-      catalog: getCatalog(),
-      basket: getBasket()
+      catalog: catalogModule,
+      basket: basketModule
     }
   }
 }
