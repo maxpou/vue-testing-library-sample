@@ -17,7 +17,7 @@ beforeEach(() => {
 afterEach(jest.resetAllMocks)
 
 async function render () {
-  const utils = await r(App)
+  const utils = r(App)
   await fireEvent.click(utils.getByText('Catalog'))
   return utils
 }
@@ -50,16 +50,13 @@ describe('Catalog', () => {
       .mockImplementation(page => page === 1 ? { data: starshipsData } : { data: starshipsData2 })
     const { getByText, queryByText } = await render(App)
 
+    expect(queryByText('X-wing')).toBeInTheDocument()
     expect(queryByText('Naboo fighter')).not.toBeInTheDocument()
+
     await fireEvent.click(getByText('Load more data...'))
+
+    // await waitFor(() => getByText('Naboo fighter'))
     expect(queryByText('Naboo fighter')).toBeInTheDocument()
-  })
-
-  it('basket should be empty', async () => {
-    const { getByText } = await render(App)
-    await fireEvent.click(getByText('Basket'))
-
-    await waitFor(() => getByText('Your basket is empty!'))
   })
 
   it('should add items to basket', async () => {
@@ -72,9 +69,18 @@ describe('Catalog', () => {
     expect(getByRole('navigation')).toHaveTextContent('Basket (3)')
     await fireEvent.click(getByText('Basket (3)'))
 
+    await waitFor(() => getByText('Total'))
+
     getByText('Millennium Falcon')
     getByText('Imperial shuttle')
     getByText('$580,000.00')
+  })
+
+  it('basket should be empty', async () => {
+    const { getByText } = await render(App)
+    await fireEvent.click(getByText('Basket'))
+
+    await waitFor(() => getByText('Your basket is empty!'))
   })
 
   it('should load spaceship detail page', async () => {

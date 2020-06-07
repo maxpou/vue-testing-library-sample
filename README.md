@@ -3,7 +3,9 @@
 [![Build Status](https://travis-ci.org/maxpou/vue-vuex-jest.svg?branch=master)](https://travis-ci.org/maxpou/vue-vuex-jest) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![Netlify Status](https://api.netlify.com/api/v1/badges/d7d58895-6e07-46ba-9b53-7e14acd6e252/deploy-status)](https://app.netlify.com/sites/vue-testing-library/deploys)
 
 
-> A Vue.js project to test [Jest](https://facebook.github.io/jest/) and [Testing-library](https://github.com/testing-library). Data come from [Star Wars API](https://swapi.co/).
+> A Vue.js project to test [Jest](https://facebook.github.io/jest/) and [Testing-library](https://github.com/testing-library). Data come from [Star Wars API](https://swapi.dev/).
+
+👉 DEMO: https://vue-testing-library.netlify.app/#/
 
 
 ## What's inside
@@ -53,10 +55,22 @@ Note: this project is based on [vue-cli](https://cli.vuejs.org).
 ```
 > npm test -- --coverage
 
+PASS  tests/unit/catalog.spec.js
+Catalog
+  ✓ should render (64ms)
+  ✓ should show products name, detail and price (43ms)
+  ✓ should be able to filter products (46ms)
+  ✓ should be able to load more data (62ms)
+  ✓ basket should be empty (142ms)
+  ✓ should add items to basket (152ms)
+  ✓ should load spaceship detail page (123ms)
+  ✓ should not load starships when I load a 2nd time the homepage (61ms)
+
+
 ----------------------|----------|----------|----------|----------|-------------------|
 File                  |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
 ----------------------|----------|----------|----------|----------|-------------------|
-All files             |    97.75 |    88.89 |    94.44 |    97.59 |                   |
+All files             |    97.75 |    77.78 |    94.44 |    97.59 |                   |
  src                  |      100 |      100 |      100 |      100 |                   |
   App.vue             |      100 |      100 |      100 |      100 |                   |
   router.js           |      100 |      100 |      100 |      100 |                   |
@@ -74,9 +88,9 @@ All files             |    97.75 |    88.89 |    94.44 |    97.59 |             
  src/store/modules    |      100 |      100 |      100 |      100 |                   |
   basket.js           |      100 |      100 |      100 |      100 |                   |
   catalog.js          |      100 |      100 |      100 |      100 |                   |
- src/views            |      100 |      100 |      100 |      100 |                   |
+ src/views            |      100 |       50 |      100 |      100 |                   |
   Basket.vue          |      100 |      100 |      100 |      100 |                   |
-  Catalog.vue         |      100 |      100 |      100 |      100 |                   |
+  Catalog.vue         |      100 |       50 |      100 |      100 |                51 |
   StarshipDetail.vue  |      100 |      100 |      100 |      100 |                   |
  tests                |      100 |      100 |      100 |      100 |                   |
   render.js           |      100 |      100 |      100 |      100 |                   |
