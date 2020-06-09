@@ -1,4 +1,4 @@
-import { fireEvent, waitFor } from '@testing-library/vue'
+import { fireEvent, screen } from '@testing-library/vue'
 import { render as r } from '../render'
 import { getStarships, getStarship } from '../../src/services/swapi.api'
 import starshipsData from '../__fixtures__/swapi.starships-page-1.json'
@@ -23,81 +23,80 @@ async function render () {
 }
 
 describe('Catalog', () => {
-  it('should render', async () => {
-    await render(App)
+  it('should render', () => {
+    render(App)
   })
 
   it('should show products name, detail and price', async () => {
-    const { getByText } = await render(App)
+    await render(App)
 
-    getByText('Executor')
-    getByText('Kuat Drive Yards, Fondor Shipyards')
-    getByText('$1,143,350,000.00')
+    screen.getByText('Executor')
+    screen.getByText('Kuat Drive Yards, Fondor Shipyards')
+    screen.getByText('$1,143,350,000.00')
   })
 
   it('should be able to filter products', async () => {
-    const { queryByText, getByLabelText, getByText } = await render(App)
-    // await fireEvent.change(getByTestId('catalog-filter'), { target: { value: 'wing' } })
-    await fireEvent.change(getByLabelText('Filter results'), { target: { value: 'wing' } })
+    await render(App)
+    await fireEvent.change(screen.getByLabelText('Filter results'), { target: { value: 'wing' } })
 
-    expect(queryByText('Death Star')).not.toBeInTheDocument()
-    expect(getByText('X-wing')).toBeInTheDocument()
-    expect(getByText('Y-wing')).toBeInTheDocument()
+    expect(screen.queryByText('Death Star')).not.toBeInTheDocument()
+    expect(screen.getByText('X-wing')).toBeInTheDocument()
+    expect(screen.getByText('Y-wing')).toBeInTheDocument()
   })
 
   it('should be able to load more data', async () => {
     getStarships
       .mockImplementation(page => page === 1 ? { data: starshipsData } : { data: starshipsData2 })
-    const { getByText, queryByText } = await render(App)
+    await render(App)
 
-    expect(queryByText('X-wing')).toBeInTheDocument()
-    expect(queryByText('Naboo fighter')).not.toBeInTheDocument()
+    expect(screen.queryByText('X-wing')).toBeInTheDocument()
+    expect(screen.queryByText('Naboo fighter')).not.toBeInTheDocument()
 
-    await fireEvent.click(getByText('Load more data...'))
+    await fireEvent.click(screen.getByText('Load more data...'))
 
-    // await waitFor(() => getByText('Naboo fighter'))
-    expect(queryByText('Naboo fighter')).toBeInTheDocument()
+    expect(screen.queryByText('Naboo fighter')).toBeInTheDocument()
   })
 
   it('should add items to basket', async () => {
-    const { getByLabelText, getByRole, getByText } = await render(App)
+    await render(App)
 
-    await fireEvent.click(getByLabelText('Add Millennium Falcon'))
-    await fireEvent.click(getByLabelText('Add Imperial shuttle'))
-    await fireEvent.click(getByLabelText('Add Imperial shuttle'))
+    await fireEvent.click(screen.getByLabelText('Add Millennium Falcon'))
+    await fireEvent.click(screen.getByLabelText('Add Imperial shuttle'))
+    await fireEvent.click(screen.getByLabelText('Add Imperial shuttle'))
 
-    expect(getByRole('navigation')).toHaveTextContent('Basket (3)')
-    await fireEvent.click(getByText('Basket (3)'))
+    expect(screen.getByRole('navigation')).toHaveTextContent('Basket (3)')
+    await fireEvent.click(screen.getByText('Basket (3)'))
 
-    await waitFor(() => getByText('Total'))
+    await screen.findByText('Total')
 
-    getByText('Millennium Falcon')
-    getByText('Imperial shuttle')
-    getByText('$580,000.00')
+    screen.getByText('Millennium Falcon')
+    screen.getByText('Imperial shuttle')
+    screen.getByText('$580,000.00')
   })
 
   it('basket should be empty', async () => {
-    const { getByText } = await render(App)
-    await fireEvent.click(getByText('Basket'))
+    await render(App)
+    await fireEvent.click(screen.getByText('Basket'))
 
-    await waitFor(() => getByText('Your basket is empty!'))
+    await screen.findByText('Your basket is empty!')
   })
 
   it('should load spaceship detail page', async () => {
-    const { getByText } = await render(App)
-    await fireEvent.click(getByText('Millennium Falcon'))
-    await waitFor(() => getByText('Manufacturer'))
+    await render(App)
 
-    getByText('YT-1300 light freighter')
-    getByText('Corellian Engineering Corporation')
-    getByText('6')
-    getByText('$100,000.00')
+    fireEvent.click(screen.getByText('Millennium Falcon'))
+    await screen.findByText('Manufacturer')
+
+    screen.getByText('YT-1300 light freighter')
+    screen.getByText('Corellian Engineering Corporation')
+    screen.getByText('6')
+    screen.getByText('$100,000.00')
   })
 
   it('should not load starships when I load a 2nd time the homepage', async () => {
-    const { getByText } = await render(App)
-    await fireEvent.click(getByText('Basket'))
-    await fireEvent.click(getByText('Catalog'))
+    await render(App)
+    await fireEvent.click(screen.getByText('Basket'))
+    await fireEvent.click(screen.getByText('Catalog'))
 
     expect(getStarships).toHaveBeenCalledTimes(1)
   })

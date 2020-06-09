@@ -10,7 +10,7 @@
 
 ## What's inside
 
-* [VueJs 2](https://vuejs.org/)
+* [Vue.js](https://vuejs.org/)
 * [vuex](https://vuex.vuejs.org/en/) (state management)
 * [vue-router](https://github.com/vuejs/vue-router) (router)
 * [Axios](https://github.com/mzabriskie/axios) (a library for XMLHttpRequests)
@@ -20,7 +20,7 @@
 * [Facebook/Jest](https://facebook.github.io/jest/)
 * [Testing-library](https://testing-library.com/docs/vue-testing-library/intro)
 * [Jest-dom](https://github.com/testing-library/jest-dom) (Custom jest matchers to test the state of the DOM)
-
+* [eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library) (to write)
 
 ## Installation
 
