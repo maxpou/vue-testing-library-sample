@@ -1,6 +1,6 @@
 # vue-testing-library-sample
 
-[![Build Status](https://travis-ci.org/maxpou/vue-vuex-jest.svg?branch=master)](https://travis-ci.org/maxpou/vue-vuex-jest) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![Netlify Status](https://api.netlify.com/api/v1/badges/d7d58895-6e07-46ba-9b53-7e14acd6e252/deploy-status)](https://app.netlify.com/sites/vue-testing-library/deploys)
+![CI](https://github.com/maxpou/vue-testing-library-sample/workflows/CI/badge.svg) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![Netlify Status](https://api.netlify.com/api/v1/badges/d7d58895-6e07-46ba-9b53-7e14acd6e252/deploy-status)](https://app.netlify.com/sites/vue-testing-library/deploys)
 
 
 > A Vue.js project to test [Jest](https://facebook.github.io/jest/) and [Testing-library](https://github.com/testing-library). Data come from [Star Wars API](https://swapi.dev/).
