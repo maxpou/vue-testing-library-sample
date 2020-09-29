@@ -5,7 +5,8 @@
 
 > A Vue.js project to test [Jest](https://facebook.github.io/jest/) and [Testing-library](https://github.com/testing-library). Data come from [Star Wars API](https://swapi.dev/).
 
-👉 DEMO: https://vue-testing-library.netlify.app/#/
+👉 DEMO: [vue-testing-library.netlify.app](https://vue-testing-library.netlify.app/#/)  
+👉 BLOG POST: [[maxpou.fr] Vue.js Testing Made it Easy (with Testing Library)](https://www.maxpou.fr/vue-js-testing-library)
 
 
 ## What's inside
